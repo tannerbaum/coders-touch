@@ -10,7 +10,8 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.leftBracket", "onCommand:extension.rightBracket",
+		"onCommand:extension.leftBracket",
+		"onCommand:extension.rightBracket",
 		"onCommand:extension.arrowFunction"
 	],
 	"main": "./out/extension.js",
@@ -42,7 +43,7 @@
 				{
 					"command": "extension.arrowFunction",
 					"group": "editing"
-				} 
+				}
 			]
 		}
 	},
