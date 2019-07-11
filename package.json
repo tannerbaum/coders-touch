@@ -10,16 +10,41 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"onCommand:extension.leftBracket", "onCommand:extension.rightBracket",
+		"onCommand:extension.arrowFunction"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"command": "extension.leftBracket",
+				"title": " { "
+			},
+			{
+				"command": "extension.rightBracket",
+				"title": " } "
+			},
+			{
+				"command": "extension.arrowFunction",
+				"title": " => "
 			}
-		]
+		],
+		"menus": {
+			"touchBar": [
+				{
+					"command": "extension.leftBracket",
+					"group": "editing"
+				},
+				{
+					"command": "extension.rightBracket",
+					"group": "editing"
+				},
+				{
+					"command": "extension.arrowFunction",
+					"group": "editing"
+				} 
+			]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
