@@ -1,7 +1,7 @@
 {
-    "name": "touchbar-symbols",
-    "displayName": "touchbar-symbols",
-    "description": "Puts essential programming symbols in touchbar",
+    "name": "symbar",
+    "displayName": "Symbar",
+    "description": "Puts essential programming symbols in your touchbar",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.36.0"
@@ -10,52 +10,154 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.leftBracket",
-        "onCommand:extension.rightBracket",
-        "onCommand:extension.arrowFunction"
+        "onCommand:extension.braces",
+        "onCommand:extension.parentheses",
+        "onCommand:extension.brackets",
+        "onCommand:extension.arrowFunction",
+        "onCommand:extension.dollar",
+        "onCommand:extension.ternary",
+        "onCommand:extension.backticks",
+        "onCommand:extension.tilda",
+        "onCommand:extension.backslash"
     ],
     "main": "./out/extension.js",
     "contributes": {
         "commands": [
             {
-                "command": "extension.leftBracket",
-                "title": " { "
+                "command": "extension.braces",
+                "title": " { } "
             },
             {
-                "command": "extension.rightBracket",
-                "title": " } "
+                "command": "extension.parentheses",
+                "title": " ( ) "
+            },
+            {
+                "command": "extension.brackets",
+                "title": " [ ] "
             },
             {
                 "command": "extension.arrowFunction",
                 "title": " => "
+            },
+            {
+                "command": "extension.dollar",
+                "title": " ${ } "
+            },
+            {
+                "command": "extension.ternary",
+                "title": " ? :  "
+            },
+            {
+                "command": "extension.backticks",
+                "title": " ` ` "
+            },
+            {
+                "command": "extension.tilda",
+                "title": " ~ "
+            },
+            {
+                "command": "extension.backslash",
+                "title": " \\ "
             }
         ],
         "menus": {
             "touchBar": [
                 {
-                    "command": "extension.leftBracket",
+                    "command": "extension.braces",
                     "group": "editing",
-                    "when": "config.coders-touch.leftBracket"
+                    "when": "config.symbar.braces"
                 },
                 {
-                    "command": "extension.rightBracket",
-                    "group": "editing"
+                    "command": "extension.parentheses",
+                    "group": "editing",
+                    "when": "config.symbar.parentheses"
+                },
+                {
+                    "command": "extension.brackets",
+                    "group": "editing",
+                    "when": "config.symbar.brackets"
                 },
                 {
                     "command": "extension.arrowFunction",
-                    "group": "editing"
+                    "group": "editing",
+                    "when": "config.symbar.arrowFunction"
+                },
+                {
+                    "command": "extension.dollar",
+                    "group": "editing",
+                    "when": "config.symbar.dollar"
+                },
+                {
+                    "command": "extension.ternary",
+                    "group": "editing",
+                    "when": "config.symbar.ternary"
+                },
+                {
+                    "command": "extension.backticks",
+                    "group": "editing",
+                    "when": "config.symbar.backticks"
+                },
+                {
+                    "command": "extension.tilda",
+                    "group": "editing",
+                    "when": "config.symbar.tilda"
+                },
+                {
+                    "command": "extension.backSlash",
+                    "group": "editing",
+                    "when": "config.symbar.backSlash"
                 }
             ]
         },
         "configuration": [
             {
-                "title": "Coder's Touch Settings",
+                "title": "Symbar Settings",
                 "type": "object",
                 "properties": {
-                    "coders-touch.leftBracket": {
+                    "symbar.braces": {
                         "type": "boolean",
                         "default": true,
-                        "description": "Show '{' in touchbar"
+                        "description": "Show '{ }' in touchbar"
+                    },
+                    "symbar.parentheses": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Show '( )' in touchbar"
+                    },
+                    "symbar.brackets": {
+                        "type": "boolean",
+                        "default": true,
+                        "description": "Show '[ ]' in touchbar"
+                    },
+                    "symbar.arrowFunction": {
+                        "type": "boolean",
+                        "default": true,
+                        "description": "Show '() => {}' in touchbar"
+                    },
+                    "symbar.dollar": {
+                        "type": "boolean",
+                        "default": true,
+                        "description": "Show '${ }' in touchbar"
+                    },
+                    "symbar.ternary": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Show '? :' in touchbar"
+                    },
+                    "symbar.backticks": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Show '` `' in touchbar"
+                    },
+                    "symbar.tilda": {
+                        "type": "boolean",
+                        "default": true,
+                        "description": "Show '~' in touchbar"
+                    },
+                    "symbar.backslash": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Show '\\' in touchbar"
                     }
                 }
             }

@@ -1,65 +1,39 @@
-# touchbar-symbols README
+# Symbar - VSCode Extension
 
-This is the README for your extension "touchbar-symbols". After writing up a brief description, we recommend including the following sections.
+A VSCode extension to put commononly used coding symbols in the Macbook touchbar. May be most useful for programmers without the superior American keyboard layout.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Touching the symbol shown on the touchbar icon simply inserts that symbol (or group of symbols) at the cursor in the open editor document. At the moment the cursor always rests at the end of the symbols.
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+![Touchbar Screenshot](images/screenshot.png)
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+Requires VSCode 1.36 or greater. Oh, and a macbook with a touchbar.
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+This extension currently has the following touchbar symbol toggles:
 
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+-   `symbar.braces`: []
+-   `symbar.parentheses`: ()
+-   `symbar.brackets`: {}
+-   `symbar.arrowFunction`: () => {}
+-   `symbar.dollar`: \${}
+-   `symbar.ternary`: ? :
+-   `symbar.backticks`: ``
+-   `symbar.tilda`: ~
+-   `symbar.backslash`: \
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+-   If too many icons are toggled to be shown in the touchbar, all of the icons will disappear (VSCode is investigating this bug). You are probably looking at a maximum of 5 icons until this is fixed.
+
+-   Unfortunately, these symbols also show up in the command pallete. I need ask the VSCode team if it is possible to hide it there.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Initial release
